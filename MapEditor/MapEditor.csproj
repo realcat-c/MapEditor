@@ -1,0 +1,145 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\mug.jpg" />
+    <None Remove="Tileset\tile000.jpg" />
+    <None Remove="Tileset\tile001.jpg" />
+    <None Remove="Tileset\tile002.jpg" />
+    <None Remove="Tileset\tile003.jpg" />
+    <None Remove="Tileset\tile004.jpg" />
+    <None Remove="Tileset\tile005.jpg" />
+    <None Remove="Tileset\tile006.jpg" />
+    <None Remove="Tileset\tile007.jpg" />
+    <None Remove="Tileset\tile008.jpg" />
+    <None Remove="Tileset\tile009.jpg" />
+    <None Remove="Tileset\tile010.jpg" />
+    <None Remove="Tileset\tile011.jpg" />
+    <None Remove="Tileset\tile012.jpg" />
+    <None Remove="Tileset\tile013.jpg" />
+    <None Remove="Tileset\tile014.jpg" />
+    <None Remove="Tileset\tile015.jpg" />
+    <None Remove="Tileset\tile016.jpg" />
+    <None Remove="Tileset\tile017.jpg" />
+    <None Remove="Tileset\tile018.jpg" />
+    <None Remove="Tileset\tile019.jpg" />
+    <None Remove="Tileset\tile020.jpg" />
+    <None Remove="Tileset\tile021.jpg" />
+    <None Remove="Tileset\tile022.jpg" />
+    <None Remove="Tileset\tile023.jpg" />
+    <None Remove="Tileset\tile024.jpg" />
+    <None Remove="Tileset\tile025.jpg" />
+    <None Remove="Tileset\tile026.jpg" />
+    <None Remove="Tileset\tile027.jpg" />
+    <None Remove="Tileset\tile028.jpg" />
+    <None Remove="Tileset\tile029.jpg" />
+    <None Remove="Tileset\tile030.jpg" />
+    <None Remove="Tileset\tile031.jpg" />
+    <None Remove="Tileset\tile032.jpg" />
+    <None Remove="Tileset\tile033.jpg" />
+    <None Remove="Tileset\tile034.jpg" />
+    <None Remove="Tileset\tile035.jpg" />
+    <None Remove="Tileset\tile036.jpg" />
+    <None Remove="Tileset\tile037.jpg" />
+    <None Remove="Tileset\tile038.jpg" />
+    <None Remove="Tileset\tile039.jpg" />
+    <None Remove="Tileset\tile040.jpg" />
+    <None Remove="Tileset\tile041.jpg" />
+    <None Remove="Tileset\tile042.jpg" />
+    <None Remove="Tileset\tile043.jpg" />
+    <None Remove="Tileset\tile044.jpg" />
+    <None Remove="Tileset\tile045.jpg" />
+    <None Remove="Tileset\tile046.jpg" />
+    <None Remove="Tileset\tile047.jpg" />
+    <None Remove="Tileset\tile048.jpg" />
+    <None Remove="Tileset\tile049.jpg" />
+    <None Remove="Tileset\tile050.jpg" />
+    <None Remove="Tileset\tile051.jpg" />
+    <None Remove="Tileset\tile052.jpg" />
+    <None Remove="Tileset\tile053.jpg" />
+    <None Remove="Tileset\tile054.jpg" />
+    <None Remove="Tileset\tile055.jpg" />
+    <None Remove="Tileset\tile056.jpg" />
+    <None Remove="Tileset\tile057.jpg" />
+    <None Remove="Tileset\tile058.jpg" />
+    <None Remove="Tileset\tile059.jpg" />
+    <None Remove="Tileset\tile060.jpg" />
+    <None Remove="Tileset\tile061.jpg" />
+    <None Remove="Tileset\tile062.jpg" />
+    <None Remove="Tileset\tile063.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\mug.jpg" />
+    <Resource Include="Tileset\tile000.jpg" />
+    <Resource Include="Tileset\tile001.jpg" />
+    <Resource Include="Tileset\tile002.jpg" />
+    <Resource Include="Tileset\tile003.jpg" />
+    <Resource Include="Tileset\tile004.jpg" />
+    <Resource Include="Tileset\tile005.jpg" />
+    <Resource Include="Tileset\tile006.jpg" />
+    <Resource Include="Tileset\tile007.jpg" />
+    <Resource Include="Tileset\tile008.jpg" />
+    <Resource Include="Tileset\tile009.jpg" />
+    <Resource Include="Tileset\tile010.jpg" />
+    <Resource Include="Tileset\tile011.jpg" />
+    <Resource Include="Tileset\tile012.jpg" />
+    <Resource Include="Tileset\tile013.jpg" />
+    <Resource Include="Tileset\tile014.jpg" />
+    <Resource Include="Tileset\tile015.jpg" />
+    <Resource Include="Tileset\tile016.jpg" />
+    <Resource Include="Tileset\tile017.jpg" />
+    <Resource Include="Tileset\tile018.jpg" />
+    <Resource Include="Tileset\tile019.jpg" />
+    <Resource Include="Tileset\tile020.jpg" />
+    <Resource Include="Tileset\tile021.jpg" />
+    <Resource Include="Tileset\tile022.jpg" />
+    <Resource Include="Tileset\tile023.jpg" />
+    <Resource Include="Tileset\tile024.jpg" />
+    <Resource Include="Tileset\tile025.jpg" />
+    <Resource Include="Tileset\tile026.jpg" />
+    <Resource Include="Tileset\tile027.jpg" />
+    <Resource Include="Tileset\tile028.jpg" />
+    <Resource Include="Tileset\tile029.jpg" />
+    <Resource Include="Tileset\tile030.jpg" />
+    <Resource Include="Tileset\tile031.jpg" />
+    <Resource Include="Tileset\tile032.jpg" />
+    <Resource Include="Tileset\tile033.jpg" />
+    <Resource Include="Tileset\tile034.jpg" />
+    <Resource Include="Tileset\tile035.jpg" />
+    <Resource Include="Tileset\tile036.jpg" />
+    <Resource Include="Tileset\tile037.jpg" />
+    <Resource Include="Tileset\tile038.jpg" />
+    <Resource Include="Tileset\tile039.jpg" />
+    <Resource Include="Tileset\tile040.jpg" />
+    <Resource Include="Tileset\tile041.jpg" />
+    <Resource Include="Tileset\tile042.jpg" />
+    <Resource Include="Tileset\tile043.jpg" />
+    <Resource Include="Tileset\tile044.jpg" />
+    <Resource Include="Tileset\tile045.jpg" />
+    <Resource Include="Tileset\tile046.jpg" />
+    <Resource Include="Tileset\tile047.jpg" />
+    <Resource Include="Tileset\tile048.jpg" />
+    <Resource Include="Tileset\tile049.jpg" />
+    <Resource Include="Tileset\tile050.jpg" />
+    <Resource Include="Tileset\tile051.jpg" />
+    <Resource Include="Tileset\tile052.jpg" />
+    <Resource Include="Tileset\tile053.jpg" />
+    <Resource Include="Tileset\tile054.jpg" />
+    <Resource Include="Tileset\tile055.jpg" />
+    <Resource Include="Tileset\tile056.jpg" />
+    <Resource Include="Tileset\tile057.jpg" />
+    <Resource Include="Tileset\tile058.jpg" />
+    <Resource Include="Tileset\tile059.jpg" />
+    <Resource Include="Tileset\tile060.jpg" />
+    <Resource Include="Tileset\tile061.jpg" />
+    <Resource Include="Tileset\tile062.jpg" />
+    <Resource Include="Tileset\tile063.jpg" />
+  </ItemGroup>
+
+</Project>

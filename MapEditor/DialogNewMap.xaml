@@ -1,0 +1,23 @@
+﻿<Window x:Class="MapEditor.DialogNewMap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MapEditor"
+        mc:Ignorable="d"
+        Title="Neue Karte erstellen" Height="150" Width="300" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="300">
+            <TextBlock Margin="10,10,10,10" Text ="Kartengröße:" FontSize="16" FontWeight="Normal" Height="22" Width="96"/>
+            <TextBox  Margin="10,10,10,10" x:Name="MapSizeTxt" Text="{Binding Size, FallbackValue=0, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="155" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="_Bestätigen" Width="100" Margin="5 0" Click="OnApplyButtonClick" TabIndex="1000" IsDefault="True" Height="28" />
+            <Button Content="_Abbrechen" Width="100" Margin="5 0" Click="OnCancelButtonClick" TabIndex="1100" IsCancel="True" Height="28" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,87 @@
+﻿<Window x:Class="MapEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MapEditor"
+        xmlns:sys="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MapEditor" Height="450" Width="800" Closing="Window_Closing">
+    <Window.Resources>
+        <Image x:Key="mug1" Source="images/mug.jpg" x:Shared ="true"/>
+        <RoutedUICommand x:Key="Exit" Text="_Exit">
+            <RoutedUICommand.InputGestures>
+                <KeyGesture >Alt+F4</KeyGesture>
+            </RoutedUICommand.InputGestures>
+        </RoutedUICommand>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="OnNewMapExecuted" CanExecute="CanAlwaysExecute" />
+        <CommandBinding Command="Save" Executed="OnSaveExecuted" CanExecute="CanAlwaysExecute" />
+        <CommandBinding Command="Open" Executed="OnOpenExecuted" CanExecute="CanAlwaysExecute" />
+        <CommandBinding Command="{StaticResource Exit}" Executed="OnExitExecuted" CanExecute="CanAlwaysExecute" />
+    </Window.CommandBindings>
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Datei">
+                    <MenuItem Header="_Neue Karte..." Command="New"/>
+                    <MenuItem Header="_Speichern" Command="Save"/>
+                    <MenuItem Header="_Laden" Command="Open"/>
+                    <MenuItem Header="_Beenden" Command="{StaticResource Exit}"/>
+                </MenuItem>
+                <MenuItem Header="About">
+                    <TextBlock Text="Autor: Jan Apsel"></TextBlock>
+                </MenuItem>
+            </Menu>
+            <Grid DockPanel.Dock="Bottom">
+                
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="230" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle Grid.Row="0" Grid.Column="0" Fill="LightGray"/>
+                    <StackPanel Orientation="Horizontal" Margin="8,5,36,0">
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Margin" Value="5,0,0,1"/>
+                            </Style>
+                        </StackPanel.Resources>
+                        <Button Click="BrushClick" ToolTip="Pinsel">
+                            <Image Source="TileSet/tile042.jpg"/>
+                        </Button>
+                        <Button Click="EraseClick" ToolTip="Radierer">
+                            <Image Source="TileSet/tile063.jpg"/>
+                        </Button>
+                        <Button Click="FillClick" ToolTip="Eimer">
+                            <Image Source="TileSet/tile019.jpg"/>
+                        </Button>
+                    </StackPanel>
+                    <ListView x:Name="ImgSelect" HorizontalContentAlignment="Stretch" Grid.RowSpan="2" Grid.Column="1">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="2" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImageData}" Tag="{Binding TagData}" VerticalAlignment="Top" HorizontalAlignment="Left" Stretch="Fill" Width="90" Height="90"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <ScrollViewer Grid.Column="0" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        
+                        <Canvas x:Name="CvsGrid"  Width="800" Height="800">
+                    
+                        </Canvas>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
